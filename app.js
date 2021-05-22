@@ -2,10 +2,11 @@ let frase = document.querySelector("#fraseTXT");
 const analizar = document.querySelector("#btnAnalizar");
 const limpiar = document.querySelector("#btnLimpiar");
 const lista = document.querySelector("#resultado");
-
+let fraseEntera;
 const isEmpty = (str) => !str.trim().length;
 analizar.addEventListener("click", async () => {
   let fraseAnalizar = frase.value;
+  fraseEntera = frase.value;
   if (isEmpty(fraseAnalizar)) {
     presentAlert();
     return;
@@ -36,7 +37,8 @@ analizar.addEventListener("click", async () => {
   } else {
     const ionCard = document.createElement("ion-card");
     const newResultado = document.createElement("ion-card-content");
-    newResultado.innerText = "Tu frase no es un palindromo lo siento :c";
+    newResultado.innerText =
+      'Tu frase: "' + fraseEntera + '" no es un palindromo lo siento :c';
     ionCard.appendChild(newResultado);
     lista.appendChild(ionCard);
   }
