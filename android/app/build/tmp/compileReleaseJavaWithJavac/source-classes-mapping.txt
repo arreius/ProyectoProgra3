@@ -1,0 +1,4 @@
+com/palindromosProgra3/app/MainActivity.java
+ com.palindromosProgra3.app.MainActivity
+com/palindromosProgra3/app/BuildConfig.java
+ com.palindromosProgra3.app.BuildConfig
